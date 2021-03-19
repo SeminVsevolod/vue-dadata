@@ -129,6 +129,7 @@ export default class VueDadata extends Vue {
     this.inputQuery = value;
     this.suggestionsVisible = true;
     this.suggestions = await this.fetchSuggestions();
+    this.$emit('input', this.inputQuery);
   }
 
   public async selectSuggestion(index: number) {
